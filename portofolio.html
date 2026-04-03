@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PORTOFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="portofolio.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="Navbar">
+        <a href="#home" class="logo"><h1><marquee behavior="scroll" direction="left">My Portofolio</marquee></h1></a>
+
+        <div class="navbar-nav">
+            <a href="#">Home</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#project">Project</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+        <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
+        </div>
+        </nav>
+        </header>
+        <section class="hero">
+         <div class="item">
+            <h1>I AM ROLAN NAGUR</h1>
+            <p>My profession is web Developer and my specialty is front end</p>
+            </div>
+        </section>
+        <div class="tentang cf" id="tentang">
+         <div class="main">
+            <h3>Tentang</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, rem! Rerum quo veniam, nam nisi deleniti blanditiis dicta ipsa esse assumenda expedita officiis explicabo ipsam quaerat tempore eligendi! Qui commodi praesentium ad, consectetur sed maxime tempore aspernatur eum nisi. Omnis, itaque. Quis corrupti dolor laudantium placeat commodi animi dignissimos facilis, quidem, magni alias reprehenderit illum praesentium voluptatibus ea minima inventore sequi minus deserunt at ullam excepturi quod velit in! Maxime repellat aperiam, natus eum vel facilis cupiditate esse dicta, iste in laboriosam iure perferendis illum, nulla excepturi officiis sint dolores quisquam! Sed ab quas, beatae commodi aut fugit nostrum perferendis dolores dolorum quod. Error ratione at quisquam, nemo excepturi culpa laudantium esse commodi ad maiores aliquam temporibus hic aut quia laboriosam nobis aperiam non dicta? Sequi pariatur dolores, aperiam laboriosam dolore alias quod, dignissimos est accusantium ut tempora voluptatem, unde nostrum! Nostrum, ex vitae! Qui aut inventore saepe minus cumque.</p> 
+         </div>
+         <div class="sidebar">
+            <h3>My Profile</h3>
+            <img src="img/Rolan.jpg" alt="Rolan Nagur">
+                    <ul>    
+                        <li>Nama      : Rolinus Tomi Nagur</li>
+                        <li>Umur      : 25 Tahun</li>
+                        <li>Pekerjaan : Mahasiswa</li>
+                        <li>Status    : Belum Menikah</li>
+                    </ul>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit illo assumenda sunt a delectus reiciendis unde vel ipsa praesentium nam vitae voluptatum odit adipisci quia, beatae, nobis similique quibusdam?
+                Sequi libero earum pariatur recusandae cumque corrupti consequatur soluta sit illo tenetur a sint obcaecati aperiam possimus magni ipsum, ipsa ad suscipit iste, dolorem nemo autem quo odio ex. Sed.</p>
+                              
+             </div>
+    </div>
+    <div class="project" id="project">
+        <h3><u>My Project</u></h3>
+        <table border="1" align="center">
+            <thead>
+                <tr>
+                    <th>Nama Project</th>
+                    <th>Matakuliah</th>
+                    <th>Bahasa Pemrograman</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Website wisata</td>
+                    <td>Web Progamming 1</td>
+                    <td>Java Script</td>
+                </tr>
+                <tr>
+                    <td>Pengembangan Website wisata</td>
+                    <td>WebProgamming 2</td>
+                    <td>PHP dan Frame work Laravel</td>
+                </tr>
+                <tr>
+                    <td>Aplikasi mobile</td>
+                    <td>Mobile Progamming</td>
+                    <td>Dart dan Frame work Flutter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="kontak" id="kontak" >
+        <h3>Form Pemesanan</h3>
+        <form action="" method="post" autocomplete="off">
+            <div class="telepon">
+            <label for="telepon" id="telepon"><p>No.hp :<input type="tel" pattern="[0-9]{10}" placeholder="silahkan isi no Anda" required autofocus></p></label>
+            </div>
+            <div class="email">
+            <label for="email" id="email"><p>E-mail Anda : <input type="email" placeholder="isi email Anda" required></p></label>
+            </div>
+            <div class="select">
+            <p style="margin: 10px 5%;">Tujuan Website :
+                <select name="tujuan" id="tujuan">
+                    <option value="">Bisnis</option>
+                    <option value="" selected>Pendidikan</option>
+                    <option value="">Wisata</option>
+                </select>
+                </p>
+            </div>
+            <div class="container">
+            <p>Saran Anda : 
+                <textarea name="saran" id="Saran" placeholder="Masukan Saran Anda" rows="10" cols="30" required></textarea>
+            </p>
+            </div>
+            <P style="margin-left: 30%; padding: 5px 200px;"><input type="checkbox" class="checkbox" checked>Saya meneyetujui semua persyaratan diatas</P>
+            <button type="submit" class="submit">Kirim</button>
+        </form>
+    </div>
+    <div class="footer">
+        <a href="#">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#project">Project</a>
+        <a href="#kontak">Kontak</a>
+        <p>copyright &copy;2025 By Rolan Nagur</p>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+    <script src="portofolio.js"></script>
+
+</body>
+</html>
