@@ -1,201 +1,664 @@
-/* RESET */
+/* Jenis-jenis properti filter: */
+/* blur:(px)--->berfungsi untuk menambahkan efek filter */
+/* brightnes:(%)--->Mengatur gelap atau terangnya sebuah gambar */
+/* contrast:(%)---> sama seperti brightnes */
+/* saturate:(%)---> Mengatur saturate dari sebuah gambar */
+/* drop-sahow:(px)---> sama seperti box shadow,tetapi ini bisa
+ diterapkan ke imgg dan juga text tanpa harus merubah properti ke box shadow dan juga text shadow */
+/* invert;(%)---> Mengatur gambar seperti klip film */
+/* grayscale:(%)---> Mengatur filter hitam putih pada gambar */
+
+/* FUNGSI TRANSFOR */
+/* Scale ---> Berfungsi untuk memperbesar atau memperkecil element */
+/* Rotate ---> Berfungsi untuk memutar posisi elment */
+/* Skew ---> Membuat condong atau miring pada elment */
+/* Translate ---> Mengubah posisi element */
+
+/* Menghapus margin dan padding dibody */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  cursor: pointer;
 }
+/* Mengatur lebar,warna,jenis huruf, dan margin pada body */
 
-/* GLOBAL */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #146f90;
-  color: white;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(20, 111, 144);
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 95%;
+  /* margin: 0; */
+  /* padding: 0; */
+  cursor: pointer;
+  overflow-x: hidden;
 }
 
-html {
+html{
   scroll-behavior: smooth;
 }
+/* Mengatur bagian Navbar */
 
-/* NAVBAR */
-.navbar {
+.Navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 5%;
-  background-color: #144e79;
+  align-items: center;
+  border-bottom: 1px solid rgb(106, 207, 250);
+  background-color: rgb(20, 78, 121);
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
 }
 
-.logo {
+/* Mengatur bagian logo */
+
+.logo  {
+  color: burlywood;
   font-size: 1.8rem;
   font-weight: bold;
-  color: burlywood;
+  font-style: italic;
 }
 
 .navbar-nav a {
   text-decoration: none;
-  margin: 0 10px;
-  color: white;
+  margin:0 20px;
+  display: inline-block;
+  color: whitesmoke;
+  font-size: 20px;
   transition: 0.3s;
 }
 
+/* Menambahkan pseducode pada menu Navigasi */
 .navbar-nav a:hover {
-  color: orange;
+    color:  rgb(245, 141, 5);
+  
 }
 
-#hamburger-menu {
-  display: none;
+/* Mengatur Menu Side bar */
+
+ #hamburger-menu{
+  display:none;
 }
 
-/* HERO */
+/* Mengatur Gambar pada halaman utama */
+
 .hero {
   height: 100vh;
-  background: url('img/frontend.jpg') center/cover no-repeat;
+  background-image: url(img/frontend.jpg);
+  background-repeat: no-repeat;
   display: flex;
+  position: relative;
+  background-size: cover;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
 }
 
-.hero .item h1 {
-  font-size: 3rem;
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0px;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 111, 144, 1) 3%,
+    rgba(20, 111, 144, 0) 75%
+  )
+}
+
+.hero .item h1{
+  font-size: 5rem;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  /* font-size: 60px; */
+  padding-top: 10px;
+  /* margin-top: 10px; */
+  padding-left: 100px;
+  color: aliceblue;
+  margin-left: 30px;
+  text-shadow: -5px 5px 2px black;
+  transition: 3s;
+}
+
+/* Mengatur kondisi pada bagian hero atau isi conten di halaman utama */
+
+ /* Mengatur kondisi pada bagian hero atau isi conten di halaman utama */  
+
+ .hero .item h1:hover {
+    transform:rotate(180deg) rotateX(180deg) rotateY(180deg) scaleY(1) translate(50px, -50px);
+    color:  rgb(245, 141, 5);
+    cursor: pointer;
+    transition: 3s;
 }
 
 .hero .item p {
-  margin-top: 10px;
-  color: #ffcc70;
+  text-align: center;
+  color: rgb(251, 173, 71);
+  font-size: 20px;
+  /* font-family: "Libertinus Keyboard", system-ui; */
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  z-index: 10;
+  /* padding-left: 30px; */
+  margin-left: 90px;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
 
-/* TENTANG */
+.hero .item p:hover {
+  font-size: 25px;
+  color: rgb(203, 119, 8);
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+
+
+/* Mengatur subtitle pada halman awal */
 .tentang {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 5%;
-  gap: 30px;
+  padding: 50px 50px;
+  gap: 30 px;
 }
 
-.main {
-  flex: 2;
-}
-
-.sidebar {
+.main{
   flex: 1;
+  margin-top: 50px;
 }
 
-.sidebar img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.main h3 {
+  /* text-align: center; */
+  /* display:inline-block; */
+  padding:50px 220px;
+  padding-top: 50px;
+  /* margin-left: 2%; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-style: bold;
+  font-variant: inherit;
+  font-weight: bold;
+  color: azure;
 }
-
-/* PROJECT */
-.project {
-  padding: 50px 5%;
+.main p {
+  width: 800px;
+  padding: 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 30px;
+  color: blanchedalmond;
+  /* position: absolute; */
+  opacity: 80%;
+}
+/* Membuat sidebar pada halman main */
+.sidebar {
+  width: 450px;
+  float: right;
+  padding: 10px;
+  margin-left: 10px;
+}
+.sidebar h3 {
+  flex: 1;
   text-align: center;
+  margin-right: 50%;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: burlywood;
 }
 
+/* Mengatur gambar pada bagian sidebar */
+.sidebar img {
+  width: 180px;
+  padding: 20px;
+  margin-right: 5%;
+  /* margin-left: 5%; */
+  margin-bottom: 3%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  filter: blur(1.5px) grayscale(50%);
+  float: left;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75),
+    -5px -5px 2px rgba(0, 0, 255, 0.75);
+  transition: 1.5s;
+
+}
+
+/* Memberikan efek hover pada bagian gambar dihalman sidebar */
+.sidebar img:hover {
+  filter: blur(0) grayscale(0);
+  transform: scaleY(1.1) scaleX(1) rotate(180deg) rotateX(180deg) rotateY(180deg) skew(10deg);
+}
+
+/* Mengatur text atu paragraf dihalaman sidebar  */
+.sidebar p {
+  line-height: normal;
+  color: aliceblue;
+  font-weight: normal;
+  color: antiquewhite;
+  font-style: italic;
+  opacity: 50%;
+  /* margin-left: 0%; */
+  float: right;
+  left: 0;
+  padding-right: 100px;
+
+}
+
+/* Mengatur list pada halman sidebar */
+.sidebar ul li {
+    line-height: 25px;
+    color: aliceblue;
+    font-weight: normal;
+    color: antiquewhite;
+    font-style: italic;
+    opacity: 80%;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+/* Mengatur isi dari halman project */
+.project {
+  padding:50px 5%;
+  text-align: center;
+  /* bottom: 100px; */
+}
+/* ?\Mengatur h3 pada halman project */
 .project h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-style: oblique;
+  font-weight: bold;
+  color: bisque;
 }
 
+/* Mengatur table pada halman project */
 .project table {
+  margin-top: 50px;
   width: 100%;
-  border-collapse: collapse;
+  height: 180px;
+  border-color: aliceblue;
+  /* border-collapse: collapse; */
 }
 
 .project th,
-.project td {
-  border: 1px solid white;
-  padding: 10px;
+.project td{
+  border: 1 px solid white;
+  padding: 10 px;
+  color: whitesmoke;
+}
+.project th{
+  color: rgb(203, 119, 8);
+  font-size: 20px;
 }
 
-/* KONTAK */
+/* Mengatur halman Kontak */
 .kontak {
   padding: 50px 5%;
   text-align: center;
+  /* margin-bottom: 100px; */
+
+}
+/* Mengatur h3 pada halman kontak */
+.kontak h3 {
+  text-align: center;
+  padding-right: 80px;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
+  color: bisque;
 }
 
-.kontak form {
+/* Mengtur form pada halman kontak */
+.kontak form  {
   max-width: 400px;
   margin: auto;
 }
-
 .kontak form div {
   margin-bottom: 15px;
   text-align: left;
 }
 
+
+/* Mengatur lebar,padding,margin pada form inputnya */
 .kontak input,
 .kontak select,
 .kontak textarea {
   width: 100%;
-  padding: 10px;
+  padding:10px;
   border-radius: 5px;
   border: none;
+  font-size: 15px;
+  /* color: aliceblue; */
+}
+.kontak .check input{
+  width:auto;
+  transform: scale(1.5);
+  padding:50px 100px;
+  margin: 5px;
+  /* margin-right:50px; */
+  /* margin-left: 50px; */
+  
 }
 
-.kontak button {
+/* Mengatur isi pada  element select */
+
+.kontak select{
+  font-size: 20px;
+  font-weight: bold;
+  color: brown;
+}
+/* Mengatur elemnt check Box  */
+
+.kontak  div label{
+  color: white;
+  padding-bottom:5px;
+}
+
+/* Mengatur bagian pada element submit */
+.submit {
+  /* margin: 10px 600px; */
   width: 100%;
+  /* height: 40px; */
   padding: 10px;
-  background-color: #3ed3e3;
-  border: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0px 1px 2px;
+  border-radius: 10px;
+  background-color: rgba(14, 8, 184, 0.42);
+  color: antiquewhite;
+  transition: 2s;
+}
+/* Menerapkan fungsi peseducode pada tombol/element submit */
+.submit:hover {
+  /* box-shadow: 10 10px 5px -3px; */
+  background-color: rgb(5, 5, 85);
+  /* margin-bottom: 20px; */
+  /* transform:  rotateY(30deg); */
+  /* position: relative; */
+}
+
+.kontak .container {
+  border: 1px solid white;
+  /* background-color:rgb(31, 121, 123); */
   border-radius: 5px;
-  color: white;
-  cursor: pointer;
 }
 
-.kontak button:hover {
-  background-color: orange;
-}
 
-/* FOOTER */
-.footer {
+/* Mengatur bagian footer */
+footer {
+  /* max-height: 100vh;  */
   text-align: center;
-  padding: 20px;
-  background-color: #021b2c;
+  padding: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid lightseagreen;
+  background-color: rgb(2, 27, 44);
 }
 
-.footer a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
+/* Mengatur links media sosial */
+ footer .medsos {
+  padding: 1rem 0;
+  transform: scale(1.5);
+  font-size: medium;
+}
+footer .medsos a {
+  color: aliceblue;
+  padding: 5px 10px;
+  /* transform: scale(); */
+  
 }
 
-.footer a:hover {
+footer .medsos a:hover{
   color: burlywood;
+  
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .tentang {
-    flex-direction: column;
+footer .links p {
+  color: lightblue;
+  font-style: italic;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+footer .links a {
+  text-decoration: none;
+  color: aliceblue;
+  display: inline-block;
+  padding: 10px 10px;
+  /* margin-top: 10px; */
+  transition: 1s;
+}
+
+footer .links a:hover {
+  color: burlywood;
+  /* font-size: medium; */
+  /* font-weight: 300; */
+  /* background-color:whitesmoke; */
+  /* border-radius: 5px; */
+}
+/* footer .links a:active { */
+  /* font-style: italic; */
+  /* font-size: 10px; */
+  /* font-weight: 100; */
+/* } */
+
+
+/* Mengatur ukuran agar responsive dimedia queris yang berbeda */
+/* Laptop*/
+@media (max-width:1366px) {
+
+  html{
+    font-size: 75%;
+  }
+  .hero{
+    width: auto;
+    height: 90vh;
   }
 
-  #hamburger-menu {
-    display: block;
+  .main p{
+    width: auto;
   }
 
-  .navbar-nav {
-    position: absolute;
-    right: -100%;
-    top: 100%;
-    background: white;
-    width: 200px;
-    height: 100vh;
-    transition: 0.3s;
+}
+
+/* tablet */
+@media(max-width:768px){
+  html{
+    font-size: 62.5%;
   }
 
-  .navbar-nav.active {
-    right: 0;
+   #hamburger-menu{
+    display: inline-block;
+    color: aliceblue;
   }
 
-  .navbar-nav a {
-    display: block;
-    color: black;
-    padding: 10px;
+  #hamburger-menu:hover{
+    color: burlywood;
   }
+.navbar-nav {
+  display: inline-block;
+}
+
+.skill p{
+  width: 85%;
+  font-size: 10px;
+  text-align: center;
+  padding-left: 0%;
+
+
+}
+.hero .item h1{
+  font-size: 4rem;
+  padding-left: 0px;
+}
+
+.hero .item p {
+  font-size: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  font-weight: 100;
+} 
+
+.hero .item p :hover{
+  font-size: 15px;
+}
+
+ 
+  .logo h1{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 200;
+  }
+   
+       .Navbar .navbar-nav {
+        position: absolute;
+        top: 100%; /* Di bawah header */
+        right: -80%; /*Sembunyikan menu*/
+        background-color:whitesmoke;/* Warna latar */
+        width: 25rem; /* Lebar menu */
+        height: 100vh; /* Tinggi penuh */
+        transition: 0.3s; /* Transisi saat menu muncul */
+        /* opacity: 95%; */
+    }
+
+    /* Saat menu aktif */
+    .Navbar .navbar-nav.active {
+        right: 0%; /* Tampilkan menu */
+    }
+
+    /* Gaya tautan di menu */
+    .Navbar .navbar-nav a {
+        color: burlywood;  /* Warna teks */
+        display: block; /* Tampilkan dalam blok */
+        margin: 1.5rem; /* Jarak antar-tautan */
+        padding: 0.5rem; /* Padding semua sisi */
+        font-size: 2rem; /* Ukuran font */
+        
+    }
+    .Navbar .navbar-nav a:hover{
+      color: rgb(89, 39, 6);
+    
+    }
+
+    .main h3 {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    .sidebar{
+      padding-bottom: 200px;
+      align-items: center;
+      
+    }
+
+    .skill p{
+      opacity: 50%;
+      font-size: 15px;
+      word-spacing: normal;
+      line-height: normal;
+      text-align: left;
+      
+  
+    }
+    .project{
+      padding-bottom: 400px;
+      /* padding-top: 300px; */
+    }
+
+    .project h3{
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    .project table{
+      width: 100%;
+      height: 600px;
+      font-size: 15px;
+    }
+
+    .project th{
+      width:auto;
+      font-size: 20px;
+      padding: 10px;
+    }
+    .kontak{
+      padding-top: 150px;
+    }
+
+    .kontak .container h3{
+      font-size: 20px;
+      font-weight: 100;
+      padding: 50px 50px;
+    }
+
+    .kontak input,
+    .kontak select,
+    .kontak textarea{
+      width: 100%;
+      padding: 5px;
+      font-size: 10px;
+      border-radius: none;
+    }
+
+    .kontak .check input{
+      width: auto;
+      transform: scale(0.8);
+      margin-left: 2px;
+      /* padding: 0; */
+    }
+
+    .submit{
+      width: 50%;
+      padding: 5px;
+    }
+     footer .links a {
+      font-size: 12px;
+      padding: 0px 5px;
+     }
+
+     footer .medsos {
+      font-size: 100px;
+      transform: scale(0.8);
+     }
+/* Mobille Phone */
+@media(max-width:458px){
+  html{
+    font-size: 55%;
+  }
+
+  .Navbar .navbar-nav a{
+    display: none;
+  }
+
+}
+}
+
+
+/* clear fix---> Berfungsi untuk mengatasi float */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  zoom: 1;
 }

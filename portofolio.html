@@ -1,158 +1,167 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="portofolio.css">
-</head>
-<body>
-
-<header>
-    <nav class="navbar">
-        <h1 class="logo">My Portfolio</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My PORTOFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+     <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="portofolio.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="Navbar">
+        <a class="logo"><h1>My Portofolio</h1></a>
 
         <div class="navbar-nav">
-            <a href="#home">Home</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#project">Project</a>
-            <a href="#kontak">Kontak</a>
+          <a href="#">Home</a>
+          <a href="#tentang">Tentang</a>
+          <a href="#project">Project</a>
+          <a href="#kontak">Kontak</a>
         </div>
-
         <div class="navbar-extra">
-            <a href="#" id="hamburger-menu">
-                <i data-feather="menu"></i>
-            </a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
         </div>
-    </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="item">
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="item">
         <h1>I AM ROLAN NAGUR</h1>
-        <p>Web Developer | Front-End Specialist</p>
-    </div>
-</section>
-
-<!-- TENTANG -->
-<section class="tentang" id="tentang">
-    <div class="main">
+        <p>My profession is web Developer | and my specialty is front end</p>
+      </div>
+    </section>
+    <div class="tentang cf" id="tentang">
+      <div class="main">
         <h3>Tentang</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-    </div>
-
-    <div class="sidebar">
+        <p>
+          Halo! Saya Rolan Nagur, seorang mahasiswa IT yang sedang meniti karier
+          sebagai web developer 🚀 Saya memiliki passion di dunia pengembangan
+          web, terutama dalam menciptakan tampilan website yang menarik,
+          responsif, dan mudah digunakan. Saya terbiasa bekerja dengan HTML,
+          CSS, dan JavaScript untuk membangun interface yang bersih dan
+          interaktif. Bagi saya, coding bukan hanya soal menulis program, tapi
+          juga tentang bagaimana menciptakan pengalaman pengguna yang nyaman dan
+          efektif. Saat ini, saya terus belajar dan mengembangkan skill melalui
+          berbagai proyek, dengan tujuan menjadi web developer profesional yang
+          mampu membangun produk digital yang bermanfaat dan berdampak.
+        </p>
+      </div>
+      <div class="sidebar">
         <h3>My Profile</h3>
-        <img src="img/Rolan.jpg" alt="Foto Rolan Nagur">
-
+        <img src="img/Rolan.jpg" alt="Rolan Nagur" />
         <ul>
-            <li>Nama: Rolinus Tomi Nagur</li>
-            <li>Umur: 25 Tahun</li>
-            <li>Pekerjaan: Mahasiswa</li>
-            <li>Status: Belum Menikah</li>
+          <li>Nama : Rolinus Tomi Nagur</li>
+          <li>Umur : 25 Tahun</li>
+          <li>Pekerjaan : Mahasiswa</li>
+          <li>Status : Belum Menikah</li>
         </ul>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        <div class="skill">
+         <p>Saya memiliki keahlian dalam membangun website menggunakan HTML, CSS, dan JavaScript, dengan fokus pada pembuatan tampilan yang responsif, modern, dan user-friendly. Saya memahami konsep manipulasi DOM, logika pemrograman dasar, serta responsive design untuk memastikan website dapat berjalan optimal di berbagai perangkat. Dalam pengembangan, saya juga terbiasa menggunakan Bootstrap 5 untuk mempercepat pembuatan antarmuka, Laravel 10 sebagai dasar backend, serta Git dan GitHub untuk version control. Didukung dengan kemampuan problem solving, saya mampu menganalisis dan menyelesaikan permasalahan dalam proses pengembangan aplikasi web secara efektif.</p>
+        </div>
+        </p>
+      </div>
     </div>
-</section>
-
-<!-- PROJECT -->
-<section class="project" id="project">
-    <h3>My Project</h3>
-
-    <table>
+    <div class="project" id="project">
+      <h3>My Project</h3>
+      <table border="1">
         <thead>
-            <tr>
-                <th>Nama Project</th>
-                <th>Mata Kuliah</th>
-                <th>Bahasa</th>
-            </tr>
+          <tr>
+            <th>Nama Project</th>
+            <th>Matakuliah</th>
+            <th>Bahasa Pemrograman</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Website Wisata</td>
-                <td>Web Programming 1</td>
-                <td>JavaScript</td>
-            </tr>
-            <tr>
-                <td>Website Wisata Lanjutan</td>
-                <td>Web Programming 2</td>
-                <td>PHP & Laravel</td>
-            </tr>
-            <tr>
-                <td>Aplikasi Mobile</td>
-                <td>Mobile Programming</td>
-                <td>Dart & Flutter</td>
-            </tr>
+          <tr>
+            <td>Website wisata</td>
+            <td>Web Progamming 1</td>
+            <td>Java Script</td>
+          </tr>
+          <tr>
+            <td>Pengembangan Website wisata</td>
+            <td>WebProgamming 2</td>
+            <td>PHP dan Frame work Laravel</td>
+          </tr>
+          <tr>
+            <td>Aplikasi mobile</td>
+            <td>Mobile Progamming</td>
+            <td>Dart dan Frame work Flutter</td>
+          </tr>
         </tbody>
-    </table>
-</section>
-
-<!-- KONTAK -->
-<section class="kontak" id="kontak">
-    <h3>Form Pemesanan</h3>
-
-    <form action="" method="post" autocomplete="off">
-
-        <div>
-            <label for="telepon">No. HP</label>
-            <input type="tel" id="telepon" name="telepon" placeholder="Masukkan nomor HP" required>
-        </div>
-
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
-        </div>
-
-        <div>
+      </table>
+    </div>
+    <div class="kontak" id="kontak">
+      <div class="container">
+        <h3>Form Pemesanan</h3>
+        <form action="" method="post" autocomplete="off">
+          <div>
+            <label for="telepon" id="telepon">No.hp</label>
+            <input
+              type="tel"
+              pattern="[0-9]{10}"
+              placeholder="silahkan isi no Anda"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <label for="email" id="email">E-mail Anda</label>
+            <input type="email" placeholder="isi email Anda" required />
+          </div>
+          <div>
             <label for="tujuan">Tujuan Website</label>
-            <select id="tujuan" name="tujuan">
-                <option value="bisnis">Bisnis</option>
-                <option value="pendidikan" selected>Pendidikan</option>
-                <option value="wisata">Wisata</option>
+            <select name="tujuan" id="tujuan">
+              <option value="">Bisnis</option>
+              <option value="" selected>Pendidikan</option>
+              <option value="">Wisata</option>
             </select>
-        </div>
+          </div>
+          <div>
+            <label for="saran">Saran Anda</label>
+            <textarea
+              name="saran"
+              id="Saran"
+              placeholder="Masukan Saran Anda"
+              rows="10"
+              cols="30"
+              required
+            ></textarea>
+          </div>
 
-        <div>
-            <label for="saran">Saran</label>
-            <textarea id="saran" name="saran" rows="5" placeholder="Masukkan saran Anda"></textarea>
-        </div>
+          <label class="check">
+            <input type="checkbox" class="checkbox" checked />Saya meneyetujui
+            semua persyaratan diatas
+          </label>
+          <button type="submit" class="submit">Kirim</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="medsos">
+        <a href="https://www.instagram.com/rolan_nagur/"><i data-feather="instagram"></i></a>
+        <a href="mailto:rolinusnagur2000@gmail.com"><i data-feather="mail"></i></a>
+        <a href="https://github.com/"><i data-feather="github"></i></a>
+      </div>
+      <div class="links">
+      <a href="#home">Home</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#project">Project</a>
+      <a href="#kontak">Kontak</a>
+      <p>copyright &copy;2025 By Rolan Nagur</p>
+      </div>
+    </footer>
 
-        <div>
-            <label>
-                <input type="checkbox" required>
-                Saya menyetujui semua persyaratan
-            </label>
-        </div>
+    <!-- Untuk menghubungkan ke file javascript -->
+    <script src="portofolio.js"></script>
 
-        <button type="submit">Kirim</button>
-    </form>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <a href="#home">Home</a>
-    <a href="#tentang">Tentang</a>
-    <a href="#project">Project</a>
-    <a href="#kontak">Kontak</a>
-
-    <p>&copy; 2025 Rolan Nagur</p>
-</footer>
-
-<script>
-    feather.replace();
-</script>
-
-<script src="portofolio.js"></script>
-
-</body>
+    <!-- Untuk memanggil icon feather menu sidebar -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>
