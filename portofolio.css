@@ -18,7 +18,9 @@
 * {
   margin: 0;
   padding: 0;
-  cursor: pointer;
+  box-sizing: border-box;
+  font-family: Arial;
+  /* cursor: pointer */
 }
 /* Mengatur lebar,warna,jenis huruf, dan margin pada body */
 
@@ -42,14 +44,15 @@ html{
 .Navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 5%;
+  padding: 15px 5%;
   align-items: center;
   border-bottom: 1px solid rgb(106, 207, 250);
   background-color: rgb(20, 78, 121);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
   z-index: 999;
 }
 
@@ -64,11 +67,10 @@ html{
 
 .navbar-nav a {
   text-decoration: none;
-  margin:0 20px;
-  display: inline-block;
+  /* margin:0 20px; */
+  /* display: inline-block; */
+  padding: 15px;
   color: whitesmoke;
-  font-size: 20px;
-  transition: 0.3s;
 }
 
 /* Menambahkan pseducode pada menu Navigasi */
@@ -81,6 +83,7 @@ html{
 
  #hamburger-menu{
   display:none;
+  font-size: 25px;
 }
 
 /* Mengatur Gambar pada halaman utama */
@@ -88,13 +91,13 @@ html{
 .hero {
   height: 100vh;
   background-image: url(img/frontend.jpg);
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   display: flex;
   position: relative;
   background-size: cover;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .hero::after {
@@ -139,21 +142,22 @@ html{
 
 .hero .item p {
   text-align: center;
-  color: rgb(251, 173, 71);
-  font-size: 20px;
+  color: whitesmoke;
+  font-size: 30px;
   /* font-family: "Libertinus Keyboard", system-ui; */
   font-weight: 400;
   font-style: normal;
   position: relative;
-  z-index: 10;
+  /* z-index: 10; */
   /* padding-left: 30px; */
-  margin-left: 90px;
-  filter: grayscale(100%);
+  /* margin-left: 90px; */
+  left: 100px;
+  /* filter: grayscale(100%); */
   transition: 0.3s;
 }
 
 .hero .item p:hover {
-  font-size: 25px;
+  font-size: 15px;
   color: rgb(203, 119, 8);
   filter: grayscale(0%);
   transition: 0.3s;
@@ -162,21 +166,20 @@ html{
 
 /* Mengatur subtitle pada halman awal */
 .tentang {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 50px;
-  gap: 30 px;
+  /* flex-direction: column; */
+  padding: 20px;
+  /* gap: 30px; */
 }
 
-.main{
-  flex: 1;
-  margin-top: 50px;
+.main {
+  /* flex: 1; */
+  padding: 50px;
 }
 
 .main h3 {
-  /* text-align: center; */
+  /* text-align: justify; */
   /* display:inline-block; */
-  padding:50px 220px;
+  padding: 10px 0px;
   padding-top: 50px;
   /* margin-left: 2%; */
   font-family: "Times New Roman", Times, serif;
@@ -187,7 +190,9 @@ html{
   color: azure;
 }
 .main p {
-  width: 800px;
+  width: 600px;
+  /* width: 100%; */
+  float: left;
   padding: 10px;
   font-size: 20px;
   font-style: normal;
@@ -198,35 +203,71 @@ html{
   opacity: 80%;
 }
 /* Membuat sidebar pada halman main */
+ /* .main .sidebar { 
+  /* flex: 2; */
+  /* float: right; */
+  /* width: 450px; */
+  /* float: left; */
+  /* padding: 10px; */
+  /* margin-left: 10px; */
+  /* margin-bottom: 100%; */
+/* }  */ 
 .sidebar {
-  width: 450px;
+  /* flex: 1; */
+  /* width: 80%; */
+  /* height: auto; */
+  /* margin: 50px; */
   float: right;
-  padding: 10px;
-  margin-left: 10px;
+  /* margin-right: -20px; */
+  /* right: 50px; */
+  /* margin-bottom: 50%; */
+  /* margin-bottom: 20%; */
+  /* display: inline-block; */
+  /* width: 100%; */
+  margin-right: 5%;
+  position:relative;
+  /* justify-content: space-between; */
+  margin: 20px 50px;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+  /* padding-bottom: 50%; */
+  /* padding: 50px; */
+  /* top: 0; */
+  /* bottom: 0; */
 }
 .sidebar h3 {
-  flex: 1;
+  /* flex: 1; */
+  /* margin-top: 0; */
   text-align: center;
-  margin-right: 50%;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  font-size: 20px;
-  font-weight: bold;
+  bottom: 20px;
+  /* margin-right: 50%; */
+  /* padding-right: 50px; */
+  padding:20px;
+  padding-right: 100px;
+  /* padding-bottom: 30px; */
+  font-size: 30px;
+  font-style: italic;
+  font-weight: normal;
   color: burlywood;
 }
 
 /* Mengatur gambar pada bagian sidebar */
+
 .sidebar img {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   width: 180px;
   padding: 20px;
   margin-right: 5%;
-  /* margin-left: 5%; */
+  margin-left: 5%;
   margin-bottom: 3%;
   border-top-right-radius: 20%;
   border-bottom-left-radius: 20%;
   filter: blur(1.5px) grayscale(50%);
-  float: left;
+  /* float: left; */
+  width: 100%;
+  max-width: 250px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75),
     -5px -5px 2px rgba(0, 0, 255, 0.75);
   transition: 1.5s;
@@ -240,22 +281,15 @@ html{
 }
 
 /* Mengatur text atu paragraf dihalaman sidebar  */
-.sidebar p {
-  line-height: normal;
-  color: aliceblue;
-  font-weight: normal;
-  color: antiquewhite;
-  font-style: italic;
-  opacity: 50%;
-  /* margin-left: 0%; */
-  float: right;
-  left: 0;
-  padding-right: 100px;
 
+.skill {
+  color: aliceblue;
+  padding: 10px 5px;
+  text-align: center;
 }
 
 /* Mengatur list pada halman sidebar */
-.sidebar ul li {
+/* .sidebar ul li {
     line-height: 25px;
     color: aliceblue;
     font-weight: normal;
@@ -263,63 +297,55 @@ html{
     font-style: italic;
     opacity: 80%;
     margin-left: 30%;
-    margin-top: 20px;
-}
+    margin-top: 20px; */
+/* } */
 
 /* Mengatur isi dari halman project */
-.project {
-  padding:50px 5%;
+.project{
+  display: grid;
+  padding: 10px 5%;
+  /* gap: 50px; */
+  /* grid-template-columns: 2fr; */
+}
+
+.project h3 {
+  /* padding:10px 5%; */
   text-align: center;
+  color: aliceblue;
+  padding-bottom: 25px;
   /* bottom: 100px; */
 }
-/* ?\Mengatur h3 pada halman project */
-.project h3 {
+/* ?\Mengatur pada halman project */
+.project-container {
+  color: black;
+  padding: 20px;
+  border: 1px solid rgb(19, 107, 208);
+  background: rgb(187, 191, 195);
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px;
+}
+
+.project-card{
   text-align: center;
-  font-size: 50px;
-  font-style: oblique;
+  padding: 20px;
+  font-size: 15px;
   font-weight: bold;
-  color: bisque;
+  color: rgb(152, 66, 5);
 }
 
-/* Mengatur table pada halman project */
-.project table {
-  margin-top: 50px;
-  width: 100%;
-  height: 180px;
-  border-color: aliceblue;
-  /* border-collapse: collapse; */
-}
 
-.project th,
-.project td{
-  border: 1 px solid white;
-  padding: 10 px;
-  color: whitesmoke;
-}
-.project th{
-  color: rgb(203, 119, 8);
-  font-size: 20px;
-}
 
 /* Mengatur halman Kontak */
 .kontak {
   padding: 50px 5%;
   text-align: center;
+  color: aliceblue;
+  margin-top: 20px;
   /* margin-bottom: 100px; */
 
 }
 /* Mengatur h3 pada halman kontak */
-.kontak h3 {
-  text-align: center;
-  padding-right: 80px;
-  font-size: 50px;
-  font-weight: bold;
-  font-style: italic;
-  color: bisque;
-}
-
-/* Mengtur form pada halman kontak */
-.kontak form  {
+.kontak form{
   max-width: 400px;
   margin: auto;
 }
@@ -334,11 +360,11 @@ html{
 .kontak select,
 .kontak textarea {
   width: 100%;
-  padding:10px;
+  padding: 20px;
   border-radius: 5px;
   border: none;
   font-size: 15px;
-  /* color: aliceblue; */
+  color: aliceblue;
 }
 .kontak .check input{
   width:auto;
@@ -391,6 +417,14 @@ html{
   border: 1px solid white;
   /* background-color:rgb(31, 121, 123); */
   border-radius: 5px;
+}
+
+.container h3{
+  padding-top: 15px;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 
@@ -460,15 +494,7 @@ footer .links a:hover {
   html{
     font-size: 75%;
   }
-  .hero{
-    width: auto;
-    height: 90vh;
-  }
-
-  .main p{
-    width: auto;
-  }
-
+  
 }
 
 /* tablet */
@@ -478,39 +504,50 @@ footer .links a:hover {
   }
 
    #hamburger-menu{
-    display: inline-block;
+    display: block;
     color: aliceblue;
+  }
+
+  #hamburger-menu {
+  color:burlywood;
+  /* z-index: 1000; */
   }
 
   #hamburger-menu:hover{
     color: burlywood;
   }
-.navbar-nav {
+.Navbar .navbar-nav {
   display: inline-block;
 }
 
-.skill p{
-  width: 85%;
+.main p {
+  width: 100%;
+  text-align: justify;
+  /* flex: 0; */
+  float: none;
+  padding: 10px;
   font-size: 10px;
-  text-align: center;
-  padding-left: 0%;
-
-
+  line-height: normal;
+  word-spacing: normal;
 }
+
 .hero .item h1{
-  font-size: 4rem;
+  font-size: 2.5rem;
   padding-left: 0px;
+  margin-left: 0;
 }
 
 .hero .item p {
   font-size: 10px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  font-weight: 100;
+  text-align: center;
+  left: 0;
+  /* margin-left: 0px; */
+  /* margin-bottom: 0px; */
+  font-weight: normal;
 } 
 
-.hero .item p :hover{
-  font-size: 15px;
+.hero .item p:hover{
+  font-size: 12px;
 }
 
  
@@ -549,48 +586,93 @@ footer .links a:hover {
       color: rgb(89, 39, 6);
     
     }
+    .sidebar {
+      /* justify-content: right; */
+      /* position: relative; */
+      /* align-items: center; */
+      position:inherit;
+      /* width: 100%; */
+      /* float: right; */
+      /* display: inline-block; */
+      /* right: 0; */
+      /* justify-content: center; */
+      padding: 20px;
+      margin-right: 0;
+      padding-right: 80px;
+      padding-bottom: 100px;
+      margin-bottom: 20px;
+      /* margin: 0; */
+
+    }
+
+    .sidebar h3{
+      font-size: 15px;
+      padding-right: 50px;
+      padding-left: 30px;
+      font-weight: normal;
+      /* text-align: left; */
+    }
+
+    .sidebar img{
+      /* flex: 1; */
+      /* float: none; */
+      width:100%;
+      max-width: 150px;
+      padding: 10px 10px;
+      /* left: 200px; */
+      border-top-right-radius: 5%;
+      border-top-left-radius: 5%;
+    }
+
+    .skill{
+      /* color: rgb(190, 46, 46); */
+      padding: 10px 0px;
+      color: aliceblue;
+      font-size: 9px;
+      text-align: center;
+    }
 
     .main h3 {
       padding-bottom: 20px;
       text-align: center;
-    }
-
-    .sidebar{
-      padding-bottom: 200px;
-      align-items: center;
-      
-    }
-
-    .skill p{
-      opacity: 50%;
+      font-weight: normal;
       font-size: 15px;
-      word-spacing: normal;
-      line-height: normal;
-      text-align: left;
+      margin: 0;
       
-  
     }
+
     .project{
-      padding-bottom: 400px;
-      /* padding-top: 300px; */
+      padding: 50px 5%;
+      text-align: center;
     }
 
-    .project h3{
-      font-size: 20px;
-      font-weight: 100;
+    .project-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      /* font-size: 8px; */
+      /* font-weight: normal; */
+      gap: 10px;
+      /* width: auto; */
+
     }
 
-    .project table{
-      width: 100%;
-      height: 600px;
-      font-size: 15px;
+    .project-card{
+      font-weight: normal;
     }
 
-    .project th{
-      width:auto;
-      font-size: 20px;
-      padding: 10px;
+    .kontak form{
+      max-width: 100%;
+      margin: 20px;
+      font-size: 10px;
     }
+
+    .kontak input {
+      height:20px;
+      font-size: 10px;
+      padding-bottom: 20px;
+
+    }
+
     .kontak{
       padding-top: 150px;
     }
@@ -604,14 +686,14 @@ footer .links a:hover {
     .kontak input,
     .kontak select,
     .kontak textarea{
-      width: 100%;
+      /* width: 100%; */
       padding: 5px;
       font-size: 10px;
       border-radius: none;
     }
 
     .kontak .check input{
-      width: auto;
+      /* width: auto; */
       transform: scale(0.8);
       margin-left: 2px;
       /* padding: 0; */
@@ -621,26 +703,26 @@ footer .links a:hover {
       width: 50%;
       padding: 5px;
     }
+    footer {
+      width: 100%;
+      padding: 10px;
+      /* top: 0; */
+      /* background-color: aliceblue; */
+      /* margin-top: 0; */
+      position: relative;
+    }
      footer .links a {
       font-size: 12px;
-      padding: 0px 5px;
+      padding: 5px;
+      bottom: 10px;
      }
 
      footer .medsos {
-      font-size: 100px;
-      transform: scale(0.8);
+      transform: scale(0.7);
+      padding: 15px 10px;
      }
-/* Mobille Phone */
-@media(max-width:458px){
-  html{
-    font-size: 55%;
-  }
 
-  .Navbar .navbar-nav a{
-    display: none;
-  }
 
-}
 }
 
 
