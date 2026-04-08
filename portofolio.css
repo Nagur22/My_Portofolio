@@ -22,6 +22,12 @@
     box-sizing: border-box;
 }
 
+* {
+    /* Menghilangkan kotak highlight saat diklik di HP */
+    -webkit-tap-highlight-color: transparent;
+}
+
+
 /* Mengatur lebar,warna,jenis huruf, dan margin pada body */
 
 body {
