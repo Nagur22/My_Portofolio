@@ -323,7 +323,7 @@ html{
   /* bottom: 100px; */
 }
 /* ?\Mengatur pada halman project */
-.project-container {
+.project-container-1 {
   color: black;
   padding: 20px;
   border: 1px solid rgb(19, 107, 208);
@@ -335,9 +335,11 @@ html{
 .project-card {
   /* width: 50%; */
   justify-content: center;
+  display: inline-block;
   align-items: center;
   text-align: center;
-  padding:10px 10px;
+  padding:30px;
+  margin: 10px auto;
   /* padding-left: 50px; */
   /* right: 50px; */
   margin-bottom: 10px;
