@@ -3,6 +3,7 @@ const navbarNav = document.querySelector(".navbar-nav");
 // ketika hamburger menu di klick
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
+  
 };
 
 // klik di luar sidebar unuk menghilangkan nav

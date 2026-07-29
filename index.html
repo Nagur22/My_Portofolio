@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My PORTOFOLIO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
-     <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
-    <link rel="stylesheet" href="portofolio.css" />
+        <!--bootstrap  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Poppins:ital,wght@0,100;0,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+        />
+        <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+        <!-- <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script> -->
+         <script src="https://unpkg.com/feather-icons"></script>
+
+        <link rel="stylesheet" href="portofolio.css" />
   </head>
   <body>
     <header>
@@ -20,9 +23,9 @@
 
         <div class="navbar-nav">
           <a href="#">Home</a>
-          <a href="#tentang">Tentang</a>
+          <a href="#tentang">About</a>
           <a href="#project">Project</a>
-          <a href="#kontak">Kontak</a>
+          <a href="#certificate">Certificate</a>
         </div>
         <div class="navbar-extra">
           <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
@@ -31,7 +34,7 @@
     </header>
     <section class="hero">
       <div class="item">
-        <h1>I AM ROLAN NAGUR</h1>
+        <h1>Hi <br> I AM ROLAN NAGUR</h1>
         <p>My profession is web Developer | and my specialty is front end</p>
       </div>
     </section>
@@ -40,7 +43,7 @@
         <h3>Tentang</h3>
         <p>
           Halo! Saya Rolan Nagur, seorang mahasiswa IT yang sedang meniti karier
-          sebagai web developer 🚀 Saya memiliki passion di dunia pengembangan
+          sebagai web developer  Saya memiliki passion di dunia pengembangan
           web, terutama dalam menciptakan tampilan website yang menarik,
           responsif, dan mudah digunakan. Saya terbiasa bekerja dengan HTML,
           CSS, dan JavaScript untuk membangun interface yang bersih dan
@@ -53,7 +56,7 @@
       </div>
       <div class="sidebar">
         <h3>My Profile</h3>
-        <img src="img/Rolan.jpg" alt="Rolan Nagur" />
+        <img src="img/myfoto.jpeg" alt="Rolan Nagur" />
         <!-- <ul> -->
           <!-- <li>Nama : Rolinus Tomi Nagur</li> -->
           <!-- <li>Umur : 25 Tahun</li> -->
@@ -68,66 +71,70 @@
     </div>
     <section class="project" id="project">
       <h3>My Project</h3>
-      <div class="project-container">
-<<<<<<< HEAD
-        <div class="project-card-1">
-          <div class="porject-name">Destinasi Wisata Labuan Bajo</div>
-          <a href="https://nagur22.github.io/Project_1/"><button type="submit">Lihat Project</button></a>
-        </div>
-=======
-        <div class="project-card"><a href="https://nagur22.github.io/Project_1/" target="_blank" rel="noopener noreferrer">Website Statis : Wisata Labuan Bajo</a></div>
->>>>>>> ce8f9ff28c01a31326aa6d30c89a5d8da5ef6a07
-        <div class="project-card"><a href="https://my-projectku.gt.tc/" target="_blank" rel="noopener noreferrer">Website Reservasi: Wisata Labuan Bajo</a></div>
-        <div class="project-card"><a href="https://nagur22.github.io/Project3/" target="_blank" rel="noopener noreferrer">Aplikasi Mobile(Menggunakan Dart dan Framework Flluter)</a></div>
+      <div class="detail-project">
+      <p>Here are the projects I have worked on using  various programming languages ​​and frameworks, </p>
+      <p>such as JavaScript, HTML, CSS, PHP, Laravel, Dart, and Flutter.</p>
       </div>
-    </section>
-    <div class="kontak" id="kontak">
-      <div class="container">
-        <h3>Form Pemesanan</h3>
-        <form action="" method="post" autocomplete="off">
-          <div>
-            <label for="telepon" id="telepon">No.hp</label>
-            <input
-              type="tel"
-              pattern="[0-9]{10}"
-              placeholder="silahkan isi no Anda"
-              required
-              autofocus
-            />
-          </div>
-          <div>
-            <label for="email" id="email">E-mail Anda</label>
-            <input type="email" placeholder="isi email Anda" required />
-          </div>
-          <div>
-            <label for="tujuan">Tujuan Website</label>
-            <select name="tujuan" id="tujuan">
-              <option value="">Bisnis</option>
-              <option value="" selected>Pendidikan</option>
-              <option value="">Wisata</option>
-            </select>
-          </div>
-          <div>
-            <label for="saran">Saran Anda</label>
-            <textarea
-              name="saran"
-              id="Saran"
-              placeholder="Masukan Saran Anda"
-              rows="10"
-              cols="30"
-              required
-            ></textarea>
-          </div>
+       <!-- Project 1 -->
+        <div class="project-card">
+          <img src="img/paket4.jpg" alt="bg1">
+          <div class="project-name">
+            <p>Labuan Bajo Destination</p>
 
-          <label class="check">
-            <input type="checkbox" class="checkbox" checked />Saya meneyetujui
-            semua persyaratan diatas
-          </label>
-          <button type="submit" class="submit">Kirim</button>
-        </form>
-      </div>
-    </div>
+              <a href="https://nagur22.github.io/Project_1/">
+                <button type="button">Visit</button>
+                </a>
+          </div>
+        
+        </div>
+
+          <!-- Project 2 -->
+           <div class="project-card">
+            <img src="img/reservasi.jpg" alt="bg2">
+            <div class="project-name">
+              <p>Labuan Bajo tour reservation</p>
+
+              <a href=" https://nagur22.github.io/Project3/">
+                <button type="button">Visit</button>
+                </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+         <div class="project-card">
+          <img src="img/umkm.jpg" alt="bg3">
+          <div class="project-name">
+            <p>UMKM: DapoerMami ocah</p>
+            <a href="https://dapurmamiocah.kesug.com/?i=1#"><button type="button">Visit</button></a>
+          </div>
+          </div>  
+        </div>
+</div>
+</div>
+</div>
+<div class="certificate" id="certificate">
+  <h3>Certificate of completion</h3>
+  <p class="sub-title">Professional Certifications: Database Management, Cybersecurity, and Business Development</p>
+  <div class="ctf">
+    <img src="img/Entrepreneur.jpeg" alt="sertifikat">
+    <p>Certificate Entrepreneur</p>
+  </div>
+  
+  <div class="ctf">
+    <img src="img/G2 Academy.jpeg" alt="sertifikat">
+    <p>Implementeion Database</p>
+  </div>
+  
+  <div class="ctf">
+    <img src="img/introduction to cybersecurity.png" alt="sertifikat">
+    <p>Introduction to Cyber security</p>
+  </div>
+</div>
+</section>
     <footer>
+      <div class="fcontainer">
       <div class="medsos">
         <a href="https://www.instagram.com/rolan_nagur/"><i data-feather="instagram"></i></a>
         <a href="mailto:rolinusnagur2000@gmail.com"><i data-feather="mail"></i></a>
@@ -135,10 +142,11 @@
       </div>
       <div class="links">
       <a href="#">Home</a>
-      <a href="#tentang">Tentang</a>
+      <a href="#tentang">About</a>
       <a href="#project">Project</a>
-      <a href="#kontak">Kontak</a>
+      <a href="#certificate">Certificate</a>
       <p>copyright &copy;2025 By Rolan Nagur</p>
+      </div>
       </div>
     </footer>
 
